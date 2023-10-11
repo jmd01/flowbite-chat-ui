@@ -14,10 +14,6 @@ const items: CarouselItem[] = [
         position: 2,
         el: document.getElementById('carousel-item-3')
     },
-    {
-        position: 3,
-        el: document.getElementById('carousel-item-4')
-    },
 ];
 
 const options: CarouselOptions = {
@@ -39,10 +35,6 @@ const options: CarouselOptions = {
             {
                 position: 2,
                 el: document.getElementById('carousel-indicator-3')
-            },
-            {
-                position: 3,
-                el: document.getElementById('carousel-indicator-4')
             },
         ]
     },

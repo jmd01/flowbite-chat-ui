@@ -11,8 +11,8 @@
 
 <body class="flex justify-center h-screen w-screen bg-gray-200">
   <h1 class="mb-6 text-4xl">Flowbite + Tailwind CSS</h1>
-  <div class="outer flex flex-col items-end gap-5 absolute bottom-10 right-10">
-    <div class="wrapper w-[400px] max-h-[80vh] rounded-2xl shadow-lg flex flex-col">
+  <div data-dial-init id="messengerParent" class="flex flex-col items-end gap-5 fixed bottom-10 right-10">
+    <div id="messengerContent" class="w-[400px] max-h-[80vh] rounded-2xl shadow-lg flex flex-col">
       <!-- 
             Header  
             -->
@@ -51,7 +51,7 @@
         <div class="messageBlock flex flex-col gap-2">
           <div class="flex flex-row items-end gap-2">
             <img class="w-8" src="assets/Avatar.png" alt="Rounded avatar">
-            <div class="messages flex flex-col gap-2 text-gray-700 text-sm">
+            <div class="messages flex flex-col gap-2 text-gray-600 text-sm">
               <div class="bg-white px-4 py-3 rounded-2xl rounded-bl">Hi, how can I help you?</div>
               <div class="bg-white px-4 py-3 rounded-2xl">What is your name?</div>
             </div>
@@ -65,7 +65,7 @@
         <div class="messageBlock flex flex-col gap-2 pt-4">
           <div class="flex flex-row-reverse items-end gap-2">
             <img class="w-8" src="assets/Avatar.png" alt="Rounded avatar">
-            <div class="messages flex flex-col items-start gap-2 text-gray-700 text-sm">
+            <div class="messages flex flex-col items-start gap-2 text-gray-600 text-sm">
               <div class="bg-white px-4 py-3 rounded-2xl rounded-br">Spongebob Squarepants</div>
             </div>
           </div>
@@ -80,14 +80,14 @@
         <div class="messageBlock flex flex-col gap-2">
           <div class="flex flex-row items-end gap-2">
             <img class="w-8" src="assets/Avatar.png" alt="Rounded avatar">
-            <div class="messages flex flex-col items-start gap-4 text-gray-700 text-sm">
+            <div class="messages flex flex-col items-start gap-4 text-gray-600 text-sm">
               <div class="bg-white px-4 py-3 rounded-2xl rounded-bl">What else?</div>
 
               <!-- Accordion -->
               <div id="accordion-collapse" data-accordion="collapse">
                 <h2 id="accordion-collapse-heading-1">
                   <button type="button"
-                    class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    class="flex items-center justify-between w-full p-5 font-medium text-left bg-white text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800"
                     data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
                     aria-controls="accordion-collapse-body-1">
                     <span>What is Flowbite?</span>
@@ -111,7 +111,7 @@
                 </div>
                 <h2 id="accordion-collapse-heading-2">
                   <button type="button"
-                    class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    class="flex items-center justify-between w-full p-5 font-medium text-left bg-white text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
                     data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
                     aria-controls="accordion-collapse-body-2">
                     <span>Is there a Figma file available?</span>
@@ -134,7 +134,7 @@
                 </div>
                 <h2 id="accordion-collapse-heading-3">
                   <button type="button"
-                    class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    class="flex items-center justify-between w-full p-5 font-medium text-left bg-white text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
                     data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
                     aria-controls="accordion-collapse-body-3">
                     <span>What are the differences between Flowbite and Tailwind UI?</span>
@@ -178,14 +178,14 @@
 
               <!-- Card -->
               <div
-                class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                class="max-w-sm p-6 bg-white border border-gray-200 rounded-xl shadow dark:bg-gray-800 dark:border-gray-700">
                 <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z" />
                 </svg>
                 <a href="#">
-                  <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Need a help in
+                  <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-600 dark:text-white">Need a help in
                     Claim?</h5>
                 </a>
                 <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Go to this step by step guideline process
@@ -203,7 +203,7 @@
               <!-- Dropdown -->
 
               <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
-                class="text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                class="text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 type="button">Dropdown button <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -213,8 +213,8 @@
 
               <!-- Dropdown menu -->
               <div id="dropdown"
-                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                class="z-50 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                <ul class="py-2 text-sm text-gray-600 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                   <li>
                     <a href="#"
                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -236,7 +236,196 @@
               </div>
 
 
+              <!-- Carousel -->
+              <div id="controls-carousel" class="relative w-full" data-carousel="static">
+                <!-- Carousel wrapper -->
+                <div class="relative h-48 overflow-hidden rounded-2xl">
+                  <!-- Item 1 -->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                      <div
+                        class="max-w-sm bg-white border border-gray-200 rounded-xl shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div class="p-6 bg-green-100 rounded-t-xl"><svg class="w-20 h-20 text-gray-800 dark:text-white"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 21">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                              d="M7.24 7.194a24.16 24.16 0 0 1 3.72-3.062m0 0c3.443-2.277 6.732-2.969 8.24-1.46 2.054 2.053.03 7.407-4.522 11.959-4.552 4.551-9.906 6.576-11.96 4.522C1.223 17.658 1.89 14.412 4.121 11m6.838-6.868c-3.443-2.277-6.732-2.969-8.24-1.46-2.054 2.053-.03 7.407 4.522 11.959m3.718-10.499a24.16 24.16 0 0 1 3.719 3.062M17.798 11c2.23 3.412 2.898 6.658 1.402 8.153-1.502 1.503-4.771.822-8.2-1.433m1-6.808a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" />
+                          </svg></div>
+
+                        <div class="text-gray-600 p-4 rounded-b-xl">Some text</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Item 2 -->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <div class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                      <div
+                        class="max-w-sm bg-white border border-gray-200 rounded-xl shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div class="p-6 bg-purple-100 rounded-t-xl"><svg class="w-20 h-20 text-gray-800 dark:text-white"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 21">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                              d="M7.24 7.194a24.16 24.16 0 0 1 3.72-3.062m0 0c3.443-2.277 6.732-2.969 8.24-1.46 2.054 2.053.03 7.407-4.522 11.959-4.552 4.551-9.906 6.576-11.96 4.522C1.223 17.658 1.89 14.412 4.121 11m6.838-6.868c-3.443-2.277-6.732-2.969-8.24-1.46-2.054 2.053-.03 7.407 4.522 11.959m3.718-10.499a24.16 24.16 0 0 1 3.719 3.062M17.798 11c2.23 3.412 2.898 6.658 1.402 8.153-1.502 1.503-4.771.822-8.2-1.433m1-6.808a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" />
+                          </svg></div>
+
+                        <div class="text-gray-600 p-4 rounded-b-xl">Some text</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Item 3 -->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                      <div
+                        class="max-w-sm bg-white border border-gray-200 rounded-xl shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div class="p-6 bg-orange-100 rounded-t-xl"><svg class="w-20 h-20 text-gray-800 dark:text-white"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 21">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                              d="M7.24 7.194a24.16 24.16 0 0 1 3.72-3.062m0 0c3.443-2.277 6.732-2.969 8.24-1.46 2.054 2.053.03 7.407-4.522 11.959-4.552 4.551-9.906 6.576-11.96 4.522C1.223 17.658 1.89 14.412 4.121 11m6.838-6.868c-3.443-2.277-6.732-2.969-8.24-1.46-2.054 2.053-.03 7.407 4.522 11.959m3.718-10.499a24.16 24.16 0 0 1 3.719 3.062M17.798 11c2.23 3.412 2.898 6.658 1.402 8.153-1.502 1.503-4.771.822-8.2-1.433m1-6.808a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" />
+                          </svg></div>
+
+                        <div class="text-gray-600 p-4 rounded-b-xl">Some text</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slider indicators -->
+                <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+                  <button type="button" class="w-3 h-3 rounded-full bg-gray-200 hover:bg-gray-400" aria-current="true"
+                    aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                  <button type="button" class="w-3 h-3 rounded-full bg-gray-200 hover:bg-gray-400" aria-current="false"
+                    aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                  <button type="button" class="w-3 h-3 rounded-full bg-gray-200 hover:bg-gray-400" aria-current="false"
+                    aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                </div>
+                <!-- Slider controls -->
+                <button type="button"
+                  class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                  data-carousel-prev>
+                  <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 1 1 5l4 4" />
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                  </span>
+                </button>
+                <button type="button"
+                  class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                  data-carousel-next>
+                  <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
+                    </svg>
+                    <span class="sr-only">Next</span>
+                  </span>
+                </button>
+              </div>
+
+              <!-- Input -->
+              <div class="messages flex flex-col  w-full gap-2 text-gray-600 text-sm">
+                <div class="bg-white px-4 py-3 rounded-2xl flex flex-col gap-4 ">
+                  <div class="">Input fields</div>
+                  <div class="relative">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+                      <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+                        <path
+                          d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
+                        <path
+                          d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
+                      </svg>
+                    </div>
+                    <input type="text" id="input-group-1"
+                      class="border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="name@flowbite.com">
+                    <button type="submit"
+                      class="absolute top-0 right-0 p-2.5 h-full text-sm font-medium text-white bg-blue-500 rounded-r-lg border border-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><svg
+                        class="rotate-90 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 18 20">
+                        <path
+                          d="m17.914 18.594-8-18a1 1 0 0 0-1.828 0l-8 18a1 1 0 0 0 1.157 1.376L8 18.281V9a1 1 0 0 1 2 0v9.281l6.758 1.689a1 1 0 0 0 1.156-1.376Z" />
+                      </svg></button>
+                  </div>
+                  <div class="relative">
+                    <input
+                      class="block w-full text-sm border text-gray-500 border-gray-300 rounded-lg cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                      aria-describedby="file_input_help" id="file_input" type="file">
+                    <p class="mt-1 text-xs text-gray-500 dark:text-gray-300" id="file_input_help">SVG, PNG, JPG or GIF
+                      (MAX. 800x400px).</p>
+                  </div>
+                  <select id="countries"
+                    class="border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option selected>Choose a country</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="FR">France</option>
+                    <option value="DE">Germany</option>
+                  </select>
+
+                  <textarea id="message" rows="4"
+                    class="block p-2.5 w-full text-sm text-gray-600  rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Write your thoughts here..."></textarea>
+                  <div>
+                    <div class="flex items-center mb-4">
+                      <input id="default-checkbox" type="checkbox" value=""
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                      <label for="default-checkbox"
+                        class="ml-2 text-sm font-medium text-gray-600 dark:text-gray-300">Default checkbox</label>
+                    </div>
+                    <div class="flex items-center">
+                      <input checked id="checked-checkbox" type="checkbox" value=""
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                      <label for="checked-checkbox"
+                        class="ml-2 text-sm font-medium text-gray-600 dark:text-gray-300">Checked state</label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex items-center mb-4">
+                      <input id="default-radio-1" type="radio" value="" name="default-radio"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                      <label for="default-radio-1"
+                        class="ml-2 text-sm font-medium text-gray-600 dark:text-gray-300">Default radio</label>
+                    </div>
+                    <div class="flex items-center">
+                      <input checked id="default-radio-2" type="radio" value="" name="default-radio"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                      <label for="default-radio-2"
+                        class="ml-2 text-sm font-medium text-gray-600 dark:text-gray-300">Checked state</label>
+                    </div>
+                  </div>
+
+                  <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" value="" class="sr-only peer">
+                    <div
+                      class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+                    </div>
+                    <span class="ml-3 text-sm font-medium text-gray-600 dark:text-gray-300">Toggle me</span>
+                  </label>
+
+
+                  <div class="relative max-w-sm">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+                      <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                      </svg>
+                    </div>
+                    <input datepicker type="text"
+                      class="border border-gray-300 text-gray-600 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Select date">
+                  </div>
+
+                  <button type="submit" class="self-end text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+
+                </div>
+              </div>
             </div>
+
+
           </div>
           <div class="flex flex-row items-end gap-2">
             <div class="spacer w-8"></div>
@@ -296,17 +485,19 @@
     <!-- 
             Toggle Chat  
             -->
-    <button type="button"
-      class="toogleChat w-14 h-14 flex text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center items-center justify-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-      <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+    <button data-dial-toggle="messengerContent" data-dial-trigger="click" type="button" id="toogleChat"
+      class=" group flex items-center justify-center text-white bg-blue-500 rounded-full w-14 h-14 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+      <svg class="w-5 h-5 transition-transform group-hover:rotate-45" aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+          d="M9 1v16M1 9h16" />
       </svg>
-      <span class="sr-only">Close</span>
+      <span class="sr-only">Open actions menu</span>
     </button>
   </div>
 
   <script src="./dist/app-bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/datepicker.min.js"></script>
 </body>
 
 </html>
